@@ -170,6 +170,7 @@ body {
 
 .wrapper {
     overflow: hidden;
+    //padding: 0 10px 0 0;
 }
 
 
@@ -178,8 +179,19 @@ body {
 
 
 .header {
+    padding: 0;
+    @media(min-width: 992px) {
+        padding: 0 10px;
+    }
     overflow: hidden;
+    &__body {
+        display: flex;
+        flex-wrap: wrap;
+
+        width: 100%;
+    }
     &__nav {
+        width: 100%;
         position: relative;
 
         /* border-bottom: 1px solid $gray2;
@@ -202,11 +214,15 @@ body {
             }
         }
         &--list {
-            padding: 0 10px;
+            padding: 0 0 0 10px;
+            @media(min-width: 992px) {
+                padding: 0 10px;
+
+            }
             &.menu-list {
                 margin: 0 5px 0 -2.5vw;
                 @media(min-width: 992px) {
-                    margin: 0 5px 0 -37px;
+                    margin: 0 5px 0 -25px;
     
                 }
             }
@@ -215,7 +231,7 @@ body {
         &--btn {
             padding: 10px 2.5vw;
             @media(min-width: 992px) {
-                padding: 10px 37px;
+                padding: 10px 34px;
             }
 
             color: $navGray;
@@ -232,7 +248,7 @@ body {
 
         color: $navGray;
 
-        padding: 10px;
+        padding: 10px 0 10px 10px;
         @media(min-width: 992px) {
             padding: 10px 0 10px 27px;
         }
@@ -247,16 +263,26 @@ body {
         }
     }
     &__links {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         @media(min-width: 992px) {
             padding-top: 0;
             padding-bottom: 0;
         }
         padding-top: 13px;
         padding-bottom: 13px;
+        &--block {
+            display: none;
+            @media(min-width: 992px) {
+                display: block;
+            }
+        }
         &--list {
-            //background-color: tomato;
+            
             &:last-child {
-                display: none;
+                //display: none;
                 @media(min-width: 1240px) {
                     margin-right: 0;
                 }
@@ -264,12 +290,12 @@ body {
         }
         &--item {
             @media(min-width: 1240px) {
-                margin: 0 0 0 56px;
+                margin: 0 0 0 50px;
             }
             margin: 0 0 0 14px;
             &:last-child {
                 @media(min-width: 1240px) {
-                    margin: 0 10px 0 56px;
+                    margin: 0 0 0 50px;
                 }
                 margin: 0 10px 0 14px;
             }
@@ -277,31 +303,23 @@ body {
     }
     &__logo {
         @media(min-width: 992px) {
-            max-width: 80px;
+            flex: 0 1 80px;
+            padding: 0 0 5px 10px;
         }
         @media(min-width: 1240px) {
-            max-width: 130px;
+            flex: 0 1 105px;
         }
-        
-        max-width: 120px;
+        margin: 0 10px 0 0;
+        flex: 0 1 120px;
     }
     &__burger {
         display: inline-block;
         position: relative;
-        right: 10px;
 
         background-color: transparent;
         border: 0;
 
         width: 35px; height: 18px;
-
-        /* &::before {
-            content: '';
-            position: absolute;
-            left: -50%; top: 0;
-            width: 200%; height: 200%;
-            transform: translate(0%, 0%);
-        } */
 
         & span {
             position: absolute;
@@ -642,7 +660,7 @@ body {
 
 .card-list {
     @media(min-width: 480px) {
-        margin-right: -10px;
+        //margin-right: -10px;
     }
     &__header {
         position: relative;

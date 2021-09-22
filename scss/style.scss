@@ -19,13 +19,13 @@ body {
 }
 
 .main-title, .section-title {
-    
+    display: inline;
+    position: relative;
     &::after {
         content: '.';
         
         color: $accent;
-
-        margin: 0 0 0 -10px;
+        position: absolute;
     }
     & .accent-text {
         display: inline-block;
@@ -193,6 +193,8 @@ body {
     &__nav {
         width: 100%;
         position: relative;
+        right: -10px;
+        //margin-right: 0px;
 
         /* border-bottom: 1px solid $gray2;
         @media(min-width: 992px) {
@@ -248,7 +250,7 @@ body {
 
         color: $navGray;
 
-        padding: 10px 0 10px 10px;
+        padding: 10px 10px 10px 10px;
         @media(min-width: 992px) {
             padding: 10px 0 10px 27px;
         }

@@ -18,8 +18,9 @@ body {
     font-size: 14px;
 }
 
+
 .main-title, .section-title {
-    display: inline;
+    display: inline-block;
     position: relative;
     &::after {
         content: '.';
@@ -32,6 +33,10 @@ body {
         text-transform: none;
         color: $accent;
     }
+}
+
+.main-title {
+    display: inline;
 }
   
 ._btn {
@@ -55,7 +60,8 @@ body {
     padding: 11px;
     min-width: 187px;
     &._large-btn {
-        padding: 11px 50px;
+        padding: 11px 30px;
+        min-width: 220px;
     }
 
     z-index: 2;
@@ -194,12 +200,6 @@ body {
         width: 100%;
         position: relative;
         right: -10px;
-        //margin-right: 0px;
-
-        /* border-bottom: 1px solid $gray2;
-        @media(min-width: 992px) {
-            border-bottom: 1px solid transparent;
-        } */
         &::before {
             content: '';
 
@@ -224,11 +224,9 @@ body {
             &.menu-list {
                 margin: 0 5px 0 -2.5vw;
                 @media(min-width: 992px) {
-                    margin: 0 5px 0 -25px;
-    
+                    margin: 0 5px 0 -40px;
                 }
             }
-            
         }
         &--btn {
             padding: 10px 2.5vw;
@@ -284,7 +282,6 @@ body {
         &--list {
             
             &:last-child {
-                //display: none;
                 @media(min-width: 1240px) {
                     margin-right: 0;
                 }
@@ -292,12 +289,12 @@ body {
         }
         &--item {
             @media(min-width: 1240px) {
-                margin: 0 0 0 50px;
+                margin: 0 0 0 53px;
             }
             margin: 0 0 0 14px;
             &:last-child {
                 @media(min-width: 1240px) {
-                    margin: 0 0 0 50px;
+                    margin: 0 0 0 53px;
                 }
                 margin: 0 10px 0 14px;
             }
@@ -306,7 +303,7 @@ body {
     &__logo {
         @media(min-width: 992px) {
             flex: 0 1 80px;
-            padding: 0 0 5px 10px;
+            //padding: 0 0 5px 1-px;
         }
         @media(min-width: 1240px) {
             flex: 0 1 105px;
@@ -386,13 +383,20 @@ body {
 
 .intro {
     padding-top: 20px;
+    
     &__item {
+        &--info {
+            padding-top: 30px;
+            position: relative;
+            left: 0px;
+
+            @media(min-width: 992px) {
+                left: 55px;
+            }
+        }
         &--title {
             text-transform: uppercase;
-            font-size: 30px;
-            @media(min-width: 400px) {
-                font-size: 45px;
-            }
+            line-height: 1.3;
             
         }
         &--text, p {
@@ -432,6 +436,12 @@ body {
                     margin-right: 10px;
                 }
             }
+        }
+        &--image {
+            justify-content: end;
+
+            position: relative;
+            right: 0px;
         }
     }   
 }

@@ -1,0 +1,38 @@
+
+.intro-catalog {
+    position: relative;
+
+    &__mob-image {
+        display: flex;
+        justify-content: center;
+        z-index: -1;
+        left: 50%; top: 55%;
+        transform: translate(-50%, -50%);
+        text-align: left;
+
+        width: 350px;
+        @media(min-width: 480px) {
+            left: 50%; top: 65%;
+            width: 450px;
+        }
+        //flex:;
+        &--img {
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
+.business-catalog {
+    &__title {
+        font-family: 'PTSans';
+        width: 100%;
+    }
+    &__block {
+        &--header {
+            flex-wrap: wrap;
+        }
+    }
+
+}
+

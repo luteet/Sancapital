@@ -10,4 +10,11 @@ $(function(){
 
       }); */
 
+      $('.burger').on('click', function() {
+        $(this).toggleClass('_active');
+        $('.header__links--block').toggleClass('_active');
+      });
+
+
+
 });

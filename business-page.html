@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sancapital</title>
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/jigastrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <header class="header">
+        <div class="header__container container">
+            <div class="header__body">
+                <nav class="header__nav row justify-content-between align-items-center fs14 pt10 pb10">
+                    <ul class="header__nav--list menu-list row">
+                        <li class="header__nav--item">
+                            <a href="#" class="header__nav--btn menu-btn">
+                                О компании
+                            </a>
+                        </li>
+                        <li class="header__nav--item">
+                            <a href="#" class="header__nav--btn menu-btn">
+                                Контакты
+                            </a>
+                        </li>
+                        <li class="header__nav--item">
+                            <a href="#" class="header__nav--btn menu-btn">
+                                Блог
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="header__nav--list tel-list row justify-content-end align-items-center">
+                        <li class="header__nav--item">
+                            <a href="tel:+79612963329" class="header__tel-link">
+                                +7(961) 296-33-29
+                            </a>
+                        </li>
+                        <li class="header__nav--item header__nav--tel-btn md-dib">
+                            <a href="#" class="header__tel-link header__tel-link--btn _btn _min-btn">
+                                Заказать звонок
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__links">
+                    <a href="index.html" class="header__logo logo pr10">
+                        <img src="img/logo.png" alt="" class="header__logo--img">
+                    </a>
+                    <div class="header__links--block pl10 pt90 xs-pt30 md-pt0"> <!-- + _active -->
+                        <div class="header__links--top df md-dn justify-content-center">
+                            <a href="#" class="header__links--tel-link _btn _min-btn">
+                                Заказать звонок
+                            </a>
+                        </div>
+                        <ul class="header__links--list main-list row justify-content-between pt10 xs-pt20 pb10 md-pb0 md-pt0">
+                            <li class="header__links--item pr10 pl10">
+                                <a href="catalog-1.html" class="header__links--link _header-link">
+                                    Каталог бизнесов
+                                </a>
+                            </li>
+                            <li class="header__links--item pr10 pl10">
+                                <a href="#" class="header__links--link _header-link">
+                                    Продать бизнес
+                                </a>
+                            </li>
+                            <li class="header__links--item pr10 pl10">
+                                <a href="#" class="header__links--link _header-link">
+                                    Инвестиции в бизнес
+                                </a>
+                            </li>
+                            <li class="header__links--item pr10 pl10">
+                                <a href="#" class="header__links--link _header-link">
+                                    Привлечь Инвестиции
+                                </a>
+                            </li>
+                            <li class="header__links--item pl10">
+                                <a href="#" class="header__links--link _header-link">
+                                    Управление бизнесом
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="header__links--list social-list row justify-content-center pt20 pb20 md-dn">
+                            <li class="social-list__item pr10 pl10">
+                                <a href="#" class="social-list__link">
+                                    <svg viewBox="0 0 20 20">
+                                        <path d="M10 .4C4.698.4.4 4.698.4 10s4.298 9.6 9.6 9.6 9.6-4.298 9.6-9.6S15.302.4 10 .4zm2.274 6.634h-1.443c-.171 0-.361.225-.361.524V8.6h1.805l-.273 1.486H10.47v4.461H8.767v-4.461H7.222V8.6h1.545v-.874c0-1.254.87-2.273 2.064-2.273h1.443v1.581z"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social-list__link pr10 pl10">
+                                <a href="#" class="header__links--link">
+                                    <svg viewBox="0 0 20 20">
+                                        <path d="M10 .4C4.698.4.4 4.698.4 10s4.298 9.6 9.6 9.6 9.6-4.298 9.6-9.6S15.302.4 10 .4zm2.274 6.634h-1.443c-.171 0-.361.225-.361.524V8.6h1.805l-.273 1.486H10.47v4.461H8.767v-4.461H7.222V8.6h1.545v-.874c0-1.254.87-2.273 2.064-2.273h1.443v1.581z"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social-list__link pr10 pl10">
+                                <a href="#" class="header__links--link">
+                                    <svg viewBox="0 0 20 20">
+                                        <path d="M10 .4C4.698.4.4 4.698.4 10s4.298 9.6 9.6 9.6 9.6-4.298 9.6-9.6S15.302.4 10 .4zm2.274 6.634h-1.443c-.171 0-.361.225-.361.524V8.6h1.805l-.273 1.486H10.47v4.461H8.767v-4.461H7.222V8.6h1.545v-.874c0-1.254.87-2.273 2.064-2.273h1.443v1.581z"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social-list__link pr10 pl10">
+                                <a href="#" class="header__links--link">
+                                    <svg viewBox="0 0 20 20">
+                                        <path d="M10 .4C4.698.4.4 4.698.4 10s4.298 9.6 9.6 9.6 9.6-4.298 9.6-9.6S15.302.4 10 .4zm2.274 6.634h-1.443c-.171 0-.361.225-.361.524V8.6h1.805l-.273 1.486H10.47v4.461H8.767v-4.461H7.222V8.6h1.545v-.874c0-1.254.87-2.273 2.064-2.273h1.443v1.581z"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social-list__link pr10 pl10">
+                                <a href="#" class="header__links--link">
+                                    <svg viewBox="0 0 20 20">
+                                        <path d="M10 .4C4.698.4.4 4.698.4 10s4.298 9.6 9.6 9.6 9.6-4.298 9.6-9.6S15.302.4 10 .4zm2.274 6.634h-1.443c-.171 0-.361.225-.361.524V8.6h1.805l-.273 1.486H10.47v4.461H8.767v-4.461H7.222V8.6h1.545v-.874c0-1.254.87-2.273 2.064-2.273h1.443v1.581z"/>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="header__burger burger md-dn"> <!-- + _active -->
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<div class="wrapper">
+    <section class="header-business sm-pt20 md-pt40">
+        <div class="header-business__container container">
+            <div class="header-business__page-address page-address pb30 dn sm-db">
+                <ul class="page-address__list df">
+                    <li class="page-address__item pr20">
+                        <a href="#" class="page-address__item--link">
+                            Главная
+                        </a>
+                    </li>
+                    <li class="page-address__item pl20 pr20">
+                        <a href="#" class="page-address__item--link">
+                            Каталог бизнесов
+                        </a>
+                    </li>
+                    <li class="page-address__item _current-page pl20">
+                        <a href="#" class="page-address__item--link">
+                            Кофейня «Старбакс»
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="header-business__body row pb30 pr10 pl10 sm-pl20 md-pl40 pt10">
+                <div class="header-business__bg br-5" style="background-image: url(img/business-page/bg.jpg);"></div>
+                <div class="header-business__label-block pb30 sm-pb10 col-12 df">
+                    <ul class="header-business__label-list">
+                        <li class="header-business__label-item header-business__label-item-date pr10 pt10">
+                            <span class="header-business__label-item-text pl10 pr10 dib br-10">11.11.2020</span>
+                        </li>
+                        <li class="header-business__label-item header-business__label-item-new pr10 pt10">
+                            <span class="header-business__label-item-text pl20 pr20 dib br-10">Новый</span>
+                        </li>
+                        <li class="header-business__label-item header-business__label-item-views pt10">
+                            <span class="header-business__label-item-text pr10 pl10 dib br-10">764</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header-business__info col-12 col-sm-8 col-md-6">
+                    <h1 class="header-business__title min-title lh12">
+                        Кофейня Старбакс с оборудованием
+                    </h1>
+                    <div class="header-business__text pt20 lh18">
+                        <p>
+                            Вдохновлять и питать дух каждого человека, с каждой чашкой кофе, каждый день, в любом месте.
+                        </p>
+                    </div>
+                    <div class="header-business__price min-title pt20">
+                        25 000 000 руб
+                    </div>
+                </div>
+                <div class="header-business__footer pt20 sm-pt10 col-12 df justify-content-between align-items-center">
+                    <div class="header-business__footer--links">
+                        <ul class="header-business__footer--links intro-links">
+                            <li class="header-business__footer--item pt10 intro-links-item">
+                                <a href="#" class="header-business__footer--link intro__link intro-links-item-link _btn _light-style">
+                                    Связаться
+                                </a>
+                            </li>
+                            <li class="header-business__footer--item pt10 intro-links-item">
+                                <a href="#" class="header-business__footer--link intro__link intro-links-item-link _btn _light-style">
+                                    Просмотр
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header-business__footer--share pt10 dn sm-db">
+                        <a href="#" class="header-business__footer--share-link _icon-link">
+                            <svg version="1.1" x="0px" y="0px" viewBox="0 0 227.216 227.216" style="enable-background:new 0 0 227.216 227.216;" xml:space="preserve">
+                                <path d="M175.897,141.476c-13.249,0-25.11,6.044-32.98,15.518l-51.194-29.066c1.592-4.48,2.467-9.297,2.467-14.317
+                                    c0-5.019-0.875-9.836-2.467-14.316l51.19-29.073c7.869,9.477,19.732,15.523,32.982,15.523c23.634,0,42.862-19.235,42.862-42.879
+                                    C218.759,19.229,199.531,0,175.897,0C152.26,0,133.03,19.229,133.03,42.865c0,5.02,0.874,9.838,2.467,14.319L84.304,86.258
+                                    c-7.869-9.472-19.729-15.514-32.975-15.514c-23.64,0-42.873,19.229-42.873,42.866c0,23.636,19.233,42.865,42.873,42.865
+                                    c13.246,0,25.105-6.042,32.974-15.513l51.194,29.067c-1.593,4.481-2.468,9.3-2.468,14.321c0,23.636,19.23,42.865,42.867,42.865
+                                    c23.634,0,42.862-19.23,42.862-42.865C218.759,160.71,199.531,141.476,175.897,141.476z M175.897,15
+                                    c15.363,0,27.862,12.5,27.862,27.865c0,15.373-12.499,27.879-27.862,27.879c-15.366,0-27.867-12.506-27.867-27.879
+                                    C148.03,27.5,160.531,15,175.897,15z M51.33,141.476c-15.369,0-27.873-12.501-27.873-27.865c0-15.366,12.504-27.866,27.873-27.866
+                                    c15.363,0,27.861,12.5,27.861,27.866C79.191,128.975,66.692,141.476,51.33,141.476z M175.897,212.216
+                                    c-15.366,0-27.867-12.501-27.867-27.865c0-15.37,12.501-27.875,27.867-27.875c15.363,0,27.862,12.505,27.862,27.875
+                                    C203.759,199.715,191.26,212.216,175.897,212.216z"/>
+                                </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="main-business pt40 pb40">
+        <div class="main-business__container container">
+            <div class="main-business__body row">
+                <div class="main-business__owner owner-business col-12 col-md-3">
+                    <div class="owner-business__body br-5">
+                        <div class="owner-business__info md-pt10">
+                            <div class="owner-business__info--header df">
+                                <div class="owner-business__info--avatar pt5">
+                                    <img src="img/business-page/avatar.jpg" alt="" class="owner-business__info--avatar-img">
+                                </div>
+                                <h2 class="owner-business__info--name fs18 md-fs14 lh18 pl30 md-pl10">
+                                    Аристарх Аристархович Самосский
+                                    <span class="owner-business__info--career pt10 lh1 fs14">
+                                        Владелец
+                                    </span>
+                                </h2>
+                            </div>
+                            <div class="owner-business__contacts pt10 pb30">
+                                <ul class="owner-business__contacts--list">
+                                    <li class="owner-business__contacts--item pl40 lh12 pt20">
+                                        <a href="#" class="owner-business__contacts--link">
+                                            г. Ростов-на-Дону, ул. Красноармейская, оф. 345/4
+                                        </a>
+                                    </li>
+                                    <li class="owner-business__contacts--item pl40 lh12 pt20">
+                                        <a href="mail:123аbc@mail.ru" class="owner-business__contacts--link">
+                                            123аbc@mail.ru
+                                        </a>
+                                    </li>
+                                    <li class="owner-business__contacts--item pl40 lh12 pt20">
+                                        <a href="tel:+79612963329" class="owner-business__contacts--link">
+                                            +7(961) 296-33-29
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="owner-business__price _border-top pt10 pb10">
+                                <div class="owner-business__price--block owner-business__min-business-info df justify-content-between align-items-center pt10 pb10">
+                                    <div class="owner-business__min-business-info--name">
+                                        Цена:
+                                    </div>
+                                    <div class="owner-business__min-business-info--value price-value fs18">
+                                        25 000 000 р
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owner-business__min-business-info _border-top pt10 pb10">
+                                <ul class="owner-business__min-business-info--list">
+                                    <li class="owner-business__min-business-info--item df justify-content-between align-items-center pt10 pb10">
+                                        <div class="owner-business__min-business-info--name">
+                                            Прибыль:
+                                        </div>
+                                        <div class="owner-business__min-business-info--value">
+                                            732 700 р/мес
+                                        </div>
+                                    </li>
+                                    <li class="owner-business__min-business-info--item df justify-content-between align-items-center pt10 pb10">
+                                        <div class="owner-business__min-business-info--name">
+                                            Окупаемость:
+                                        </div>
+                                        <div class="owner-business__min-business-info--value">
+                                            34 мес
+                                        </div>
+                                    </li>
+                                    <li class="owner-business__min-business-info--item df justify-content-between align-items-center pt10 pb10">
+                                        <div class="owner-business__min-business-info--name">
+                                            Доходность:
+                                        </div>
+                                        <div class="owner-business__min-business-info--value">
+                                            76%
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="owner-business__add-business-info _border-top pt10 pb10">
+                                <ul class="owner-business__min-business-info--list">
+                                    <li class="owner-business__min-business-info--item df justify-content-between align-items-center pt10 pb10">
+                                        <div class="owner-business__min-business-info--name">
+                                            Индустрия:
+                                        </div>
+                                        <div class="owner-business__min-business-info--value">
+                                            Общепит
+                                        </div>
+                                    </li>
+                                    <li class="owner-business__min-business-info--item df justify-content-between align-items-center pt10 pb10">
+                                        <div class="owner-business__min-business-info--name">
+                                            Платформа:
+                                        </div>
+                                        <div class="owner-business__min-business-info--value">
+                                            Какая-то
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="owner-business__footer pt10 row pr10 pl10 pb20">
+                                <a href="#" class="owner-business__link _btn _active-style col-12">
+                                    Получить документы
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-business__info info-business col-12 col-md-9 pt30 md-pt0">
+                    <div class="info-business__body">
+                        <div class="info-business__slider">
+                            <div class="info-business__slider--item">
+    <a href="#" class="info-business__slider--item-image">
+        <div class="info-business__slider--item-icon">
+            <svg version="1.1" x="0px" y="0px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+                <path class="icon-bg" opacity="0.3" enable-background="new" d="M20,0L20,0 c11,0,20,9,20,20l0,0c0,11-9,20-20,20l0,0C9,40,0,31,0,20l0,0C0,9,9,0,20,0z"/>
+                <path class="icon-stroke" d="M28,12H12c-1.7,0-3,1.3-3,3v10c0,1.7,1.3,3,3,3h16c1.7,0,3-1.3,3-3V15C31,13.4,29.7,12,28,12z M20,20.7 L12.1,14h15.7L20,20.7z M28,26H12c-0.6,0-1-0.5-1-1v-9.2l9.1,7.8l9.1-7.8V25C29.1,25.6,28.6,26,28,26z"/>
+            </svg>
+        </div>
+        <img src="img/business-page/slide-1.jpg" alt="" class="info-business__slider--item-img br-5">
+    </a>
+</div>
+                            <div class="info-business__slider--item">
+    <a href="#" class="info-business__slider--item-image">
+        <div class="info-business__slider--item-icon">
+            <svg version="1.1" x="0px" y="0px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+                <path class="icon-bg" opacity="0.3" enable-background="new" d="M20,0L20,0 c11,0,20,9,20,20l0,0c0,11-9,20-20,20l0,0C9,40,0,31,0,20l0,0C0,9,9,0,20,0z"/>
+                <path class="icon-stroke" d="M28,12H12c-1.7,0-3,1.3-3,3v10c0,1.7,1.3,3,3,3h16c1.7,0,3-1.3,3-3V15C31,13.4,29.7,12,28,12z M20,20.7 L12.1,14h15.7L20,20.7z M28,26H12c-0.6,0-1-0.5-1-1v-9.2l9.1,7.8l9.1-7.8V25C29.1,25.6,28.6,26,28,26z"/>
+            </svg>
+        </div>
+        <img src="img/business-page/slide-2.jpg" alt="" class="info-business__slider--item-img br-5">
+    </a>
+</div>
+                            <div class="info-business__slider--item">
+    <a href="#" class="info-business__slider--item-image">
+        <div class="info-business__slider--item-icon">
+            <svg version="1.1" x="0px" y="0px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+                <path class="icon-bg" opacity="0.3" enable-background="new" d="M20,0L20,0 c11,0,20,9,20,20l0,0c0,11-9,20-20,20l0,0C9,40,0,31,0,20l0,0C0,9,9,0,20,0z"/>
+                <path class="icon-stroke" d="M28,12H12c-1.7,0-3,1.3-3,3v10c0,1.7,1.3,3,3,3h16c1.7,0,3-1.3,3-3V15C31,13.4,29.7,12,28,12z M20,20.7 L12.1,14h15.7L20,20.7z M28,26H12c-0.6,0-1-0.5-1-1v-9.2l9.1,7.8l9.1-7.8V25C29.1,25.6,28.6,26,28,26z"/>
+            </svg>
+        </div>
+        <img src="img/business-page/slide-3.jpg" alt="" class="info-business__slider--item-img br-5">
+    </a>
+</div>
+                            <div class="info-business__slider--item">
+    <a href="#" class="info-business__slider--item-image">
+        <div class="info-business__slider--item-icon">
+            <svg version="1.1" x="0px" y="0px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+                <path class="icon-bg" opacity="0.3" enable-background="new" d="M20,0L20,0 c11,0,20,9,20,20l0,0c0,11-9,20-20,20l0,0C9,40,0,31,0,20l0,0C0,9,9,0,20,0z"/>
+                <path class="icon-stroke" d="M28,12H12c-1.7,0-3,1.3-3,3v10c0,1.7,1.3,3,3,3h16c1.7,0,3-1.3,3-3V15C31,13.4,29.7,12,28,12z M20,20.7 L12.1,14h15.7L20,20.7z M28,26H12c-0.6,0-1-0.5-1-1v-9.2l9.1,7.8l9.1-7.8V25C29.1,25.6,28.6,26,28,26z"/>
+            </svg>
+        </div>
+        <img src="img/business-page/slide-1.jpg" alt="" class="info-business__slider--item-img br-5">
+    </a>
+</div>
+                            <div class="info-business__slider--item">
+    <a href="#" class="info-business__slider--item-image">
+        <div class="info-business__slider--item-icon">
+            <svg version="1.1" x="0px" y="0px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+                <path class="icon-bg" opacity="0.3" enable-background="new" d="M20,0L20,0 c11,0,20,9,20,20l0,0c0,11-9,20-20,20l0,0C9,40,0,31,0,20l0,0C0,9,9,0,20,0z"/>
+                <path class="icon-stroke" d="M28,12H12c-1.7,0-3,1.3-3,3v10c0,1.7,1.3,3,3,3h16c1.7,0,3-1.3,3-3V15C31,13.4,29.7,12,28,12z M20,20.7 L12.1,14h15.7L20,20.7z M28,26H12c-0.6,0-1-0.5-1-1v-9.2l9.1,7.8l9.1-7.8V25C29.1,25.6,28.6,26,28,26z"/>
+            </svg>
+        </div>
+        <img src="img/business-page/slide-2.jpg" alt="" class="info-business__slider--item-img br-5">
+    </a>
+</div>
+                        </div>
+                        <div class="info-business__tabs pt10">
+                            <div class="info-business__tabs--header">
+                                <ul class="info-business__tabs--btn-list row pt20 pb20 sm-pl0">
+                                    <li class="info-business__tabs--btn-item md-pr20 md-pl20 sm-pr10 sm-pl10 p5">
+    <a href="#" class="info-business__tabs--btn-link pt10 pb10 pr10 pl10 md-pr0 md-pl0 _active">
+        Описание
+    </a>
+</li>
+                                    <li class="info-business__tabs--btn-item md-pr20 md-pl20 sm-pr10 sm-pl10 p5">
+    <a href="#" class="info-business__tabs--btn-link pt10 pb10 pr10 pl10 md-pr0 md-pl0 ">
+        Характеристики
+    </a>
+</li>
+                                    <li class="info-business__tabs--btn-item md-pr20 md-pl20 sm-pr10 sm-pl10 p5">
+    <a href="#" class="info-business__tabs--btn-link pt10 pb10 pr10 pl10 md-pr0 md-pl0 ">
+        Видео
+    </a>
+</li>
+                                    <li class="info-business__tabs--btn-item md-pr20 md-pl20 sm-pr10 sm-pl10 p5">
+    <a href="#" class="info-business__tabs--btn-link pt10 pb10 pr10 pl10 md-pr0 md-pl0 ">
+        Условия
+    </a>
+</li>
+                                    <li class="info-business__tabs--btn-item md-pr20 md-pl20 sm-pr10 sm-pl10 p5">
+    <a href="#" class="info-business__tabs--btn-link pt10 pb10 pr10 pl10 md-pr0 md-pl0 ">
+        документы
+    </a>
+</li>
+                                </ul>
+                            </div>
+                            <ul class="info-business__tabs--list">
+                                <li class="info-business__tabs--item tab-item">
+                                    <h2 class="tab-item__title min-title">
+                                        Описание
+                                    </h2>
+                                    <div class="tab-item__text pt10 lh20">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim a d minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim a d minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="info-business__add add-block check-business p10 pt20 pt50">
+    <div class="add-block__body row br-5">
+        <div class="add-block__info col-12 pt20 pl10 pb20 xs-pb30 xs-pt30 xs-pl30 pr20 sm-pr0 col-sm-8">
+            <h2 class="add-block__info--title min-title section-title _after-elem lh1">
+                Проверить 
+                <span class="accent-text">
+                    бизнес
+                </span>
+            </h2>
+            <div class="add-block__info--text pt10 lh18">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim a d minim veniam, quis nostrud exercitation ullamco.
+                </p>
+            </div>
+            <div class="add-block__info--btn-body pt20">
+                <a href="#" class="add-block__info--btn _btn">
+                    Проверить
+                </a>
+            </div>
+        </div>
+        <div class="add-block__image">
+            <img src="img/add-block/image-1.png" alt="" class="add-block__image--img br-5">
+        </div>
+    </div>
+</div>
+<div class="info-business__add add-block check-business p10 pt20">
+    <div class="add-block__body row br-5">
+        <div class="add-block__info col-12 pt20 pl10 pb20 xs-pb30 xs-pt30 xs-pl30 pr20 sm-pr0 col-sm-8">
+            <h2 class="add-block__info--title min-title section-title _after-elem lh1">
+                Поставить  
+                <span class="accent-text">
+                    оценку бизнесу
+                </span>
+            </h2>
+            <div class="add-block__info--text pt10 lh18">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim a d minim veniam, quis nostrud exercitation ullamco.
+                </p>
+            </div>
+            <div class="add-block__info--btn-body pt20">
+                <a href="#" class="add-block__info--btn _btn">
+                    Оценка
+                </a>
+            </div>
+        </div>
+        <div class="add-block__image">
+            <img src="img/add-block/image-2.png" alt="" class="add-block__image--img br-5">
+        </div>
+    </div>
+</div>
+
+
+                        <div class="info-busines__card-list card-list pt30">
+    <h2 class="info-busines__card-list--title min-title">
+        Похожие обьявления
+    </h2>
+    <div class="business-catalog__list card-list__list row">
+        <div class="card-list__item card-item pt20 pb20 col-12 col-xs-6 col-sm-4">
+    <div class="card-list__item--body card-item__body">
+        <div class="card-item__buttons">
+            <a href="#" class="card-item__buttons--btn btn-favorite" title="Добавить в избранное">
+                <svg version="1.1" style="width: 14px;" width="14" height="16" x="0px" y="0px" viewBox="0 0 14 16" enable-background="new 0 0 14 16" xml:space="preserve">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7,0 c0.6,0,1,0.4,1,1v14c0,0.6-0.4,1-1,1s-1-0.4-1-1V1C6,0.4,6.4,0,7,0z M1,3c0.6,0,1,0.4,1,1v11c0,0.6-0.4,1-1,1s-1-0.4-1-1V4 C0,3.4,0.4,3,1,3z M13,6c0.6,0,1,0.4,1,1v8c0,0.6-0.4,1-1,1s-1-0.4-1-1V7C12,6.4,12.4,6,13,6z"/>
+                </svg>
+            </a>
+            <a href="#" class="card-item__buttons--btn btn-compare" title="Сравнить">
+                <svg version="1.1" style="width: 14px;" width="14" height="16" x="0px" y="0px" viewBox="0 0 14 16" enable-background="new 0 0 14 16" xml:space="preserve">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7,0 c0.6,0,1,0.4,1,1v14c0,0.6-0.4,1-1,1s-1-0.4-1-1V1C6,0.4,6.4,0,7,0z M1,3c0.6,0,1,0.4,1,1v11c0,0.6-0.4,1-1,1s-1-0.4-1-1V4 C0,3.4,0.4,3,1,3z M13,6c0.6,0,1,0.4,1,1v8c0,0.6-0.4,1-1,1s-1-0.4-1-1V7C12,6.4,12.4,6,13,6z"/>
+                </svg>
+            </a>
+        </div>
+        <div class="card-list__item--header card-item__header">
+            <div class="card-item__header--image">
+                <img src="img/card/card.jpg" alt="" class="card-item__header--image-img">
+            </div>
+            <div class="card-item__header--labels">
+                <span class="card-item__header--date card-item__header--label">
+                    11.11.2020
+                </span>
+                <span class="card-item__header--new card-item__header--label _alt-style">
+                    Новый
+                </span>
+            </div>
+            <div class="card-item__header--details-buttons">
+                <a href="business-page.html" class="card-item__header--detail-btn btn-detail" title="Перейти">
+                    <svg version="1.1" style="width: 40px" x="0px" y="0px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+                        <path class="icon-bg" opacity="0.3" enable-background="new" d="M20,0L20,0 c11,0,20,9,20,20l0,0c0,11-9,20-20,20l0,0C9,40,0,31,0,20l0,0C0,9,9,0,20,0z"/>
+                        <path class="icon-stroke" d="M28,12H12c-1.7,0-3,1.3-3,3v10c0,1.7,1.3,3,3,3h16c1.7,0,3-1.3,3-3V15C31,13.4,29.7,12,28,12z M20,20.7 L12.1,14h15.7L20,20.7z M28,26H12c-0.6,0-1-0.5-1-1v-9.2l9.1,7.8l9.1-7.8V25C29.1,25.6,28.6,26,28,26z"/>
+                    </svg>
+                </a>
+                <a href="business-page.html" class="card-item__header--detail-btn btn-mail" title="Написать">
+                    <svg version="1.1" style="width: 40px" x="0px" y="0px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+                        <path class="icon-bg" opacity="0.3" enable-background="new" d="M20,0L20,0 c11,0,20,9,20,20l0,0c0,11-9,20-20,20l0,0C9,40,0,31,0,20l0,0C0,9,9,0,20,0z"/>
+                        <path class="icon-stroke" d="M28,12H12c-1.7,0-3,1.3-3,3v10c0,1.7,1.3,3,3,3h16c1.7,0,3-1.3,3-3V15C31,13.4,29.7,12,28,12z M20,20.7 L12.1,14h15.7L20,20.7z M28,26H12c-0.6,0-1-0.5-1-1v-9.2l9.1,7.8l9.1-7.8V25C29.1,25.6,28.6,26,28,26z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="card-list__item--info card-item__info p10">
+            <div class="card-item__info--top">
+                <h3 class="card-item__info--title title fs16 pt20">
+                    <a href="business-page.html" class="card-item__info--link">
+                        Кафе "Старбакс"
+                    </a>
+                </h3>
+                <div class="card-item__info--address lh15 pt10 pb10">
+                    г. Ростов-на-Дону, ул. Большая Садовая 81/31
+                </div>
+                <div class="card-item__info--text lh18 pb20 dn sm-db">
+                    <p>
+                        Вдохновлять и питать дух каждого человека, с каждой чашкой кофе, каждый день, в любом месте.
+                    </p>
+                </div>
+            </div>
+            <div class="card-item__info--bottom pt10">
+                <ul class="card-item__info--list pt10 pb10">
+                    <li class="card-item__info--li">
+                        <span class="card-item__info--li-name">
+                            Прибыль:
+                        </span>
+                        <span class="card-item__info--li-value">
+                            732 700 р/мес
+                        </span>
+                    </li>
+                    <li class="card-item__info--li">
+                        <span class="card-item__info--li-name">
+                            Окупаемость:
+                        </span>
+                        <span class="card-item__info--li-value">
+                            34 мес
+                        </span>
+                    </li>
+                </ul>
+                <div class="card-item__info--price pt20 pb10">
+                    <span class="card-item__info--price-name">
+                        Цена
+                    </span>
+                    <span class="card-item__info--price-value fs18">
+                        25 000 000 р
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="card-list__item card-item pt20 pb20 col-12 col-xs-6 col-sm-4">
+    <div class="card-list__item--body card-item__body">
+        <div class="card-item__buttons">
+            <a href="#" class="card-item__buttons--btn btn-favorite" title="Добавить в избранное">
+                <svg version="1.1" style="width: 14px;" width="14" height="16" x="0px" y="0px" viewBox="0 0 14 16" enable-background="new 0 0 14 16" xml:space="preserve">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7,0 c0.6,0,1,0.4,1,1v14c0,0.6-0.4,1-1,1s-1-0.4-1-1V1C6,0.4,6.4,0,7,0z M1,3c0.6,0,1,0.4,1,1v11c0,0.6-0.4,1-1,1s-1-0.4-1-1V4 C0,3.4,0.4,3,1,3z M13,6c0.6,0,1,0.4,1,1v8c0,0.6-0.4,1-1,1s-1-0.4-1-1V7C12,6.4,12.4,6,13,6z"/>
+                </svg>
+            </a>
+            <a href="#" class="card-item__buttons--btn btn-compare" title="Сравнить">
+                <svg version="1.1" style="width: 14px;" width="14" height="16" x="0px" y="0px" viewBox="0 0 14 16" enable-background="new 0 0 14 16" xml:space="preserve">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7,0 c0.6,0,1,0.4,1,1v14c0,0.6-0.4,1-1,1s-1-0.4-1-1V1C6,0.4,6.4,0,7,0z M1,3c0.6,0,1,0.4,1,1v11c0,0.6-0.4,1-1,1s-1-0.4-1-1V4 C0,3.4,0.4,3,1,3z M13,6c0.6,0,1,0.4,1,1v8c0,0.6-0.4,1-1,1s-1-0.4-1-1V7C12,6.4,12.4,6,13,6z"/>
+                </svg>
+            </a>
+        </div>
+        <div class="card-list__item--header card-item__header">
+            <div class="card-item__header--image">
+                <img src="img/card/card.jpg" alt="" class="card-item__header--image-img">
+            </div>
+            <div class="card-item__header--labels">
+                <span class="card-item__header--date card-item__header--label">
+                    11.11.2020
+                </span>
+                <span class="card-item__header--new card-item__header--label _alt-style">
+                    Новый
+                </span>
+            </div>
+            <div class="card-item__header--details-buttons">
+                <a href="business-page.html" class="card-item__header--detail-btn btn-detail" title="Перейти">
+                    <svg version="1.1" style="width: 40px" x="0px" y="0px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+                        <path class="icon-bg" opacity="0.3" enable-background="new" d="M20,0L20,0 c11,0,20,9,20,20l0,0c0,11-9,20-20,20l0,0C9,40,0,31,0,20l0,0C0,9,9,0,20,0z"/>
+                        <path class="icon-stroke" d="M28,12H12c-1.7,0-3,1.3-3,3v10c0,1.7,1.3,3,3,3h16c1.7,0,3-1.3,3-3V15C31,13.4,29.7,12,28,12z M20,20.7 L12.1,14h15.7L20,20.7z M28,26H12c-0.6,0-1-0.5-1-1v-9.2l9.1,7.8l9.1-7.8V25C29.1,25.6,28.6,26,28,26z"/>
+                    </svg>
+                </a>
+                <a href="business-page.html" class="card-item__header--detail-btn btn-mail" title="Написать">
+                    <svg version="1.1" style="width: 40px" x="0px" y="0px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+                        <path class="icon-bg" opacity="0.3" enable-background="new" d="M20,0L20,0 c11,0,20,9,20,20l0,0c0,11-9,20-20,20l0,0C9,40,0,31,0,20l0,0C0,9,9,0,20,0z"/>
+                        <path class="icon-stroke" d="M28,12H12c-1.7,0-3,1.3-3,3v10c0,1.7,1.3,3,3,3h16c1.7,0,3-1.3,3-3V15C31,13.4,29.7,12,28,12z M20,20.7 L12.1,14h15.7L20,20.7z M28,26H12c-0.6,0-1-0.5-1-1v-9.2l9.1,7.8l9.1-7.8V25C29.1,25.6,28.6,26,28,26z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="card-list__item--info card-item__info p10">
+            <div class="card-item__info--top">
+                <h3 class="card-item__info--title title fs16 pt20">
+                    <a href="business-page.html" class="card-item__info--link">
+                        Кафе "Старбакс"
+                    </a>
+                </h3>
+                <div class="card-item__info--address lh15 pt10 pb10">
+                    г. Ростов-на-Дону, ул. Большая Садовая 81/31
+                </div>
+                <div class="card-item__info--text lh18 pb20 dn sm-db">
+                    <p>
+                        Вдохновлять и питать дух каждого человека, с каждой чашкой кофе, каждый день, в любом месте.
+                    </p>
+                </div>
+            </div>
+            <div class="card-item__info--bottom pt10">
+                <ul class="card-item__info--list pt10 pb10">
+                    <li class="card-item__info--li">
+                        <span class="card-item__info--li-name">
+                            Прибыль:
+                        </span>
+                        <span class="card-item__info--li-value">
+                            732 700 р/мес
+                        </span>
+                    </li>
+                    <li class="card-item__info--li">
+                        <span class="card-item__info--li-name">
+                            Окупаемость:
+                        </span>
+                        <span class="card-item__info--li-value">
+                            34 мес
+                        </span>
+                    </li>
+                </ul>
+                <div class="card-item__info--price pt20 pb10">
+                    <span class="card-item__info--price-name">
+                        Цена
+                    </span>
+                    <span class="card-item__info--price-value fs18">
+                        25 000 000 р
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="card-list__item card-item pt20 pb20 col-12 col-xs-6 col-sm-4">
+    <div class="card-list__item--body card-item__body">
+        <div class="card-item__buttons">
+            <a href="#" class="card-item__buttons--btn btn-favorite" title="Добавить в избранное">
+                <svg version="1.1" style="width: 14px;" width="14" height="16" x="0px" y="0px" viewBox="0 0 14 16" enable-background="new 0 0 14 16" xml:space="preserve">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7,0 c0.6,0,1,0.4,1,1v14c0,0.6-0.4,1-1,1s-1-0.4-1-1V1C6,0.4,6.4,0,7,0z M1,3c0.6,0,1,0.4,1,1v11c0,0.6-0.4,1-1,1s-1-0.4-1-1V4 C0,3.4,0.4,3,1,3z M13,6c0.6,0,1,0.4,1,1v8c0,0.6-0.4,1-1,1s-1-0.4-1-1V7C12,6.4,12.4,6,13,6z"/>
+                </svg>
+            </a>
+            <a href="#" class="card-item__buttons--btn btn-compare" title="Сравнить">
+                <svg version="1.1" style="width: 14px;" width="14" height="16" x="0px" y="0px" viewBox="0 0 14 16" enable-background="new 0 0 14 16" xml:space="preserve">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7,0 c0.6,0,1,0.4,1,1v14c0,0.6-0.4,1-1,1s-1-0.4-1-1V1C6,0.4,6.4,0,7,0z M1,3c0.6,0,1,0.4,1,1v11c0,0.6-0.4,1-1,1s-1-0.4-1-1V4 C0,3.4,0.4,3,1,3z M13,6c0.6,0,1,0.4,1,1v8c0,0.6-0.4,1-1,1s-1-0.4-1-1V7C12,6.4,12.4,6,13,6z"/>
+                </svg>
+            </a>
+        </div>
+        <div class="card-list__item--header card-item__header">
+            <div class="card-item__header--image">
+                <img src="img/card/card.jpg" alt="" class="card-item__header--image-img">
+            </div>
+            <div class="card-item__header--labels">
+                <span class="card-item__header--date card-item__header--label">
+                    11.11.2020
+                </span>
+                <span class="card-item__header--new card-item__header--label _alt-style">
+                    Новый
+                </span>
+            </div>
+            <div class="card-item__header--details-buttons">
+                <a href="business-page.html" class="card-item__header--detail-btn btn-detail" title="Перейти">
+                    <svg version="1.1" style="width: 40px" x="0px" y="0px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+                        <path class="icon-bg" opacity="0.3" enable-background="new" d="M20,0L20,0 c11,0,20,9,20,20l0,0c0,11-9,20-20,20l0,0C9,40,0,31,0,20l0,0C0,9,9,0,20,0z"/>
+                        <path class="icon-stroke" d="M28,12H12c-1.7,0-3,1.3-3,3v10c0,1.7,1.3,3,3,3h16c1.7,0,3-1.3,3-3V15C31,13.4,29.7,12,28,12z M20,20.7 L12.1,14h15.7L20,20.7z M28,26H12c-0.6,0-1-0.5-1-1v-9.2l9.1,7.8l9.1-7.8V25C29.1,25.6,28.6,26,28,26z"/>
+                    </svg>
+                </a>
+                <a href="business-page.html" class="card-item__header--detail-btn btn-mail" title="Написать">
+                    <svg version="1.1" style="width: 40px" x="0px" y="0px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+                        <path class="icon-bg" opacity="0.3" enable-background="new" d="M20,0L20,0 c11,0,20,9,20,20l0,0c0,11-9,20-20,20l0,0C9,40,0,31,0,20l0,0C0,9,9,0,20,0z"/>
+                        <path class="icon-stroke" d="M28,12H12c-1.7,0-3,1.3-3,3v10c0,1.7,1.3,3,3,3h16c1.7,0,3-1.3,3-3V15C31,13.4,29.7,12,28,12z M20,20.7 L12.1,14h15.7L20,20.7z M28,26H12c-0.6,0-1-0.5-1-1v-9.2l9.1,7.8l9.1-7.8V25C29.1,25.6,28.6,26,28,26z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="card-list__item--info card-item__info p10">
+            <div class="card-item__info--top">
+                <h3 class="card-item__info--title title fs16 pt20">
+                    <a href="business-page.html" class="card-item__info--link">
+                        Кафе "Старбакс"
+                    </a>
+                </h3>
+                <div class="card-item__info--address lh15 pt10 pb10">
+                    г. Ростов-на-Дону, ул. Большая Садовая 81/31
+                </div>
+                <div class="card-item__info--text lh18 pb20 dn sm-db">
+                    <p>
+                        Вдохновлять и питать дух каждого человека, с каждой чашкой кофе, каждый день, в любом месте.
+                    </p>
+                </div>
+            </div>
+            <div class="card-item__info--bottom pt10">
+                <ul class="card-item__info--list pt10 pb10">
+                    <li class="card-item__info--li">
+                        <span class="card-item__info--li-name">
+                            Прибыль:
+                        </span>
+                        <span class="card-item__info--li-value">
+                            732 700 р/мес
+                        </span>
+                    </li>
+                    <li class="card-item__info--li">
+                        <span class="card-item__info--li-name">
+                            Окупаемость:
+                        </span>
+                        <span class="card-item__info--li-value">
+                            34 мес
+                        </span>
+                    </li>
+                </ul>
+                <div class="card-item__info--price pt20 pb10">
+                    <span class="card-item__info--price-name">
+                        Цена
+                    </span>
+                    <span class="card-item__info--price-value fs18">
+                        25 000 000 р
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<footer class="footer pt30 pb20">
+    <div class="footer__container container">
+        <div class="footer__body">
+            <div class="footer__row align-items-center" >
+                <a href="#" class="footer__logo logo">
+                    <img src="img/logo.png" alt="" class="footer__logo--img">
+                </a>
+                <a href="#" class="footer__tel-link _btn _min-btn sm-dn">
+                    Заказать звонок
+                </a>
+            </div>
+            <div class="footer__row pb30">
+                <nav class="footer__nav pb20">
+                    <div class="footer__nav--block pt20">
+                        <div class="footer__nav--block-body">
+                            <h2 class="footer__nav--title title pb10 fs14 lh15">
+                                Контакты
+                            </h2>
+                            <ul class="footer__nav--list">
+                                <li class="footer__nav--item pl20">
+                                    <a href="#" class="footer__nav--link lh22">
+                                        г. Ростов-на-Дону, ул. Московская 63, оф. 250, 221
+                                    </a>
+                                </li>
+                                <li class="footer__nav--item pl20">
+                                    <a href="mail:dir@sancapital.ru" class="footer__nav--link">
+                                        dir@sancapital.ru
+                                    </a>
+                                </li>
+                                <li class="footer__nav--item pl20">
+                                    <a href="tel:+79612963329" class="footer__nav--link">
+                                        +7(961) 296-33-29
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer__nav--block dn sm-db pt20">
+                        <div class="footer__nav--block-body">
+                            <h2 class="footer__nav--title title pb10 fs14 lh15">
+                                О компании
+                            </h2>
+                            <ul class="footer__nav--list">
+                                <li class="footer__nav--item">
+                                    <a href="#" class="footer__nav--link">
+                                        О компании
+                                    </a>
+                                </li>
+                                <li class="footer__nav--item">
+                                    <a href="#" class="footer__nav--link">
+                                        Контакты
+                                    </a>
+                                </li>
+                                <li class="footer__nav--item">
+                                    <a href="#" class="footer__nav--link">
+                                        Блог
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer__nav--block dn sm-db pt20">
+                        <div class="footer__nav--block-body">
+                            <h2 class="footer__nav--title title pb10 fs14 lh15">
+                                Услуги
+                            </h2>
+                            <ul class="footer__nav--list">
+                                <li class="footer__nav--item">
+                                    <a href="#" class="footer__nav--link">
+                                        Каталог бизнесов
+                                    </a>
+                                </li>
+                                <li class="footer__nav--item">
+                                    <a href="#" class="footer__nav--link">
+                                        Продать бизнес
+                                    </a>
+                                </li>
+                                <li class="footer__nav--item">
+                                    <a href="#" class="footer__nav--link">
+                                        Инвестиции в бизнес
+                                    </a>
+                                </li>
+                                <li class="footer__nav--item">
+                                    <a href="#" class="footer__nav--link">
+                                        Привлечь инвестиции
+                                    </a>
+                                </li>
+                                <li class="footer__nav--item">
+                                    <a href="#" class="footer__nav--link">
+                                        Управление бизнесом
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <form action="#" class="footer__form">
+                    <div class="footer__form--body">
+                        <h2 class="footer__form--title title fs14 lh15 pb20">
+                            Подпишитесь на рассылку новых бизнесов
+                        </h2>
+                        <label>
+                            <input type="tel" name="tel" class="footer__form--input _input-styles" placeholder="Введите номер телефона" required>
+                        </label>
+                        <label>
+                            <input type="text" name="email" class="footer__form--input _input-styles" placeholder="Введите почту" required>
+                        </label>
+                        <button type="submit" class="footer__form--submit _btn">
+                            Подписаться
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="footer-decor-line"></div>
+            <div class="footer__row _top-line pt20">
+                <div class="footer__social pb20 sm-pb0">
+                    <ul class="footer__social--list">
+                        <li class="footer__social--item">
+                            <a href="#" class="footer__social--link">
+                                <svg viewBox="0 0 20 20">
+                                    <path d="M10 .4C4.698.4.4 4.698.4 10s4.298 9.6 9.6 9.6 9.6-4.298 9.6-9.6S15.302.4 10 .4zm2.274 6.634h-1.443c-.171 0-.361.225-.361.524V8.6h1.805l-.273 1.486H10.47v4.461H8.767v-4.461H7.222V8.6h1.545v-.874c0-1.254.87-2.273 2.064-2.273h1.443v1.581z"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="footer__social--item">
+                            <a href="#" class="footer__social--link">
+                                <svg viewBox="0 0 20 20">
+                                    <path d="M10 .4C4.698.4.4 4.698.4 10s4.298 9.6 9.6 9.6 9.6-4.298 9.6-9.6S15.302.4 10 .4zm2.274 6.634h-1.443c-.171 0-.361.225-.361.524V8.6h1.805l-.273 1.486H10.47v4.461H8.767v-4.461H7.222V8.6h1.545v-.874c0-1.254.87-2.273 2.064-2.273h1.443v1.581z"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="footer__social--item">
+                            <a href="#" class="footer__social--link">
+                                <svg viewBox="0 0 20 20">
+                                    <path d="M10 .4C4.698.4.4 4.698.4 10s4.298 9.6 9.6 9.6 9.6-4.298 9.6-9.6S15.302.4 10 .4zm2.274 6.634h-1.443c-.171 0-.361.225-.361.524V8.6h1.805l-.273 1.486H10.47v4.461H8.767v-4.461H7.222V8.6h1.545v-.874c0-1.254.87-2.273 2.064-2.273h1.443v1.581z"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="footer__social--item">
+                            <a href="#" class="footer__social--link">
+                                <svg viewBox="0 0 20 20">
+                                    <path d="M10 .4C4.698.4.4 4.698.4 10s4.298 9.6 9.6 9.6 9.6-4.298 9.6-9.6S15.302.4 10 .4zm2.274 6.634h-1.443c-.171 0-.361.225-.361.524V8.6h1.805l-.273 1.486H10.47v4.461H8.767v-4.461H7.222V8.6h1.545v-.874c0-1.254.87-2.273 2.064-2.273h1.443v1.581z"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="footer__social--item">
+                            <a href="#" class="footer__social--link">
+                                <svg viewBox="0 0 20 20">
+                                    <path d="M10 .4C4.698.4.4 4.698.4 10s4.298 9.6 9.6 9.6 9.6-4.298 9.6-9.6S15.302.4 10 .4zm2.274 6.634h-1.443c-.171 0-.361.225-.361.524V8.6h1.805l-.273 1.486H10.47v4.461H8.767v-4.461H7.222V8.6h1.545v-.874c0-1.254.87-2.273 2.064-2.273h1.443v1.581z"/>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <span class="footer__copy dn sm-db">
+                    ©SanCapital 2020
+                </span>
+                <div class="footer__extra pb10 pt20 sm-pt0 sm-pb0">
+                    <ul class="footer__extra--list">
+                        <li class="footer__extra--item">
+                            <a href="#" class="footer__extra--link">
+                                Политика конфиденциальности
+                            </a>
+                        </li>
+                        <li class="footer__extra--item">
+                            <a href="#" class="footer__extra--link">
+                                Пользовательское соглашение
+                            </a>
+                        </li>
+                        <li class="footer__extra--item">
+                            <a href="#" class="footer__extra--link">
+                                Публичная оферта
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

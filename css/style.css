@@ -406,8 +406,6 @@ body {
 }
 
 .card-item.row-mode .card-item__header--details-buttons {
-  margin: 0;
-  padding: 0;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -524,19 +522,22 @@ body {
 
 .card-item__header--details-buttons {
   position: absolute;
-  left: 50%;
+  left: 0;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(0%, -50%);
+  width: 100%;
   opacity: 1;
   visibility: visible;
   margin: 0 -11px;
-  padding: 0 0 0 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   transition: all .2s ease-in-out;
 }
 
 .card-item__header--detail-btn {
   display: inline-block;
-  margin: 0 5px;
+  margin: 5px;
   transition: all .2s ease-in-out;
 }
 
@@ -1202,9 +1203,7 @@ body {
 
   .card-item.row-mode .card-item__header--details-buttons {
     margin: 0 -11px;
-    padding: 0 0 0 20px;
-    width: auto;
-    display: block;
+    width: 100%;
   }
 
   .card-item.row-mode .card-item__info--bottom {

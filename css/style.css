@@ -2425,7 +2425,7 @@ body {
 .footer__row._top-line::before {
   content: '';
   position: absolute;
-  left: 10px;
+  left: 0px;
   top: 0;
   width: 100vw;
   height: 1px;
@@ -2859,9 +2859,8 @@ body {
   }
 
   .footer__row._top-line::before {
-    left: calc(50% + 10px);
+    left: 0px;
     top: 0;
-    transform: translate(-50%, 0);
     width: 100%;
   }
 }

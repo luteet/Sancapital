@@ -1,9 +1,11 @@
+@charset "UTF-8";
+
 @font-face {
   font-weight: 400;
   font-family: "PTSans";
   font-display: swap;
   font-style: normal;
-  src: url("PTSans-Regular.woff") format("woff"),url("PTSans-Regular.woff") format("woff2");
+  src: url("PTSans-Regular.woff") format("woff"), url("PTSans-Regular.woff") format("woff2");
 }
 
 @font-face {
@@ -11,7 +13,7 @@
   font-family: "PTSans";
   font-display: swap;
   font-style: normal;
-  src: url("PTSans-Bold.woff") format("woff"),url("PTSans-Bold.woff") format("woff2");
+  src: url("PTSans-Bold.woff") format("woff"), url("PTSans-Bold.woff") format("woff2");
 }
 
 @font-face {
@@ -19,7 +21,7 @@
   font-family: "Roboto";
   font-display: swap;
   font-style: normal;
-  src: url("Roboto-Regular.woff") format("woff"),url("Roboto-Regular.woff") format("woff2");
+  src: url("Roboto-Regular.woff") format("woff"), url("Roboto-Regular.woff") format("woff2");
 }
 
 @font-face {
@@ -27,7 +29,15 @@
   font-family: "Roboto";
   font-display: swap;
   font-style: normal;
-  src: url("Roboto-Bold.woff") format("woff"),url("Roboto-Bold.woff") format("woff2");
+  src: url("Roboto-Bold.woff") format("woff"), url("Roboto-Bold.woff") format("woff2");
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: "Open Sans";
+  font-display: swap;
+  font-style: normal;
+  src: url("OpenSans-Regular.woff") format("woff"), url("OpenSans-Regular.woff") format("woff2");
 }
 
 @font-face {
@@ -35,7 +45,7 @@
   font-family: "Open Sans";
   font-display: swap;
   font-style: normal;
-  src: url("OpenSans-SemiBold.woff") format("woff"),url("OpenSans-SemiBold.woff") format("woff2");
+  src: url("OpenSans-SemiBold.woff") format("woff"), url("OpenSans-SemiBold.woff") format("woff2");
 }
 
 @font-face {
@@ -43,8 +53,10 @@
   font-family: "Open Sans";
   font-display: swap;
   font-style: normal;
-  src: url("OpenSans-Bold.woff") format("woff"),url("OpenSans-Bold.woff") format("woff2");
+  src: url("OpenSans-Bold.woff") format("woff"), url("OpenSans-Bold.woff") format("woff2");
 }
+
+/* =-=-=-=-=-=-=-=-=-=-= <Глобальные стили> =-=-=-=-=-=-=-=-=-=-= */
 
 ul li {
   list-style: none;
@@ -53,9 +65,26 @@ ul li {
 body {
   letter-spacing: 0.05em;
   font-family: 'Roboto';
-  color: #333;
+  color: #333333;
   font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
+
+._border-top {
+  border-top: 1px solid #c9cfdd;
+}
+
+.wrapper {
+  flex: 1 1 auto;
+}
+
+._icon-before {
+  padding-left: 20px;
+}
+
+/* =-=-=-=-=-=-=-=-=-=-= <Текстовые стили> =-=-=-=-=-=-=-=-=-=-= */
 
 .main-title,
 .section-title {
@@ -88,6 +117,39 @@ body {
   font-weight: 700;
 }
 
+.text-content p {
+  padding: 10px 0;
+  line-height: 2;
+}
+
+.text-content__image {
+  display: inline-block;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.text-content__image._large-image {
+  width: 100%;
+  height: 100%;
+  max-height: 325px;
+}
+
+.text-content__image._min-image {
+  width: 100%;
+  height: 100%;
+  max-height: 188px;
+  display: block;
+}
+
+.text-content__img {
+  min-height: 188px;
+  overflow: hidden;
+}
+
+/* =-=-=-=-=-=-=-=-=-=-= </Текстовые стили> =-=-=-=-=-=-=-=-=-=-= */
+
+/* =-=-=-=-=-=-=-=-=-=-= <Кнопки и ссылки> =-=-=-=-=-=-=-=-=-=-= */
+
 ._btn {
   display: inline-block;
   position: relative;
@@ -98,9 +160,9 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   border-radius: 2em;
-  border: 2px solid transparent;
-  box-shadow: 0px 9px 32px 0px rgba(31,90,153,0.3);
-  color: #FFFFFF;
+  color: #333333;
+  border: 2px solid #000000;
+  box-shadow: none;
   background-color: transparent;
   padding: 11px 40px;
   z-index: 2;
@@ -121,7 +183,7 @@ body {
   height: calc(100% + 4px);
   background: linear-gradient(90deg, #4f9fe1 0%, #297de5 100%);
   transition: all .2s ease-in-out;
-  opacity: 1;
+  opacity: 0;
   border-radius: 2em;
   z-index: -1;
 }
@@ -132,6 +194,16 @@ body {
 }
 
 ._btn._active-style::before {
+  opacity: 1;
+}
+
+._btn:hover {
+  border: 2px solid transparent;
+  box-shadow: 0px 9px 32px 0px rgba(31, 90, 153, 0.3);
+  color: #FFFFFF;
+}
+
+._btn:hover::before {
   opacity: 1;
 }
 
@@ -148,8 +220,87 @@ body {
   display: none;
 }
 
-._border-top {
-  border-top: 1px solid #c9cfdd;
+._btn._min-btn:hover {
+  background-color: #757b89;
+  color: #FFFFFF;
+}
+
+._btn._light-style {
+  color: #FFFFFF;
+  border: 2px solid #FFFFFF;
+}
+
+._btn._light-style:hover {
+  border: 2px solid transparent;
+}
+
+._reset-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: 2px solid #757b89;
+  box-shadow: none;
+  background-color: transparent;
+  border-radius: 50%;
+  padding: 13px;
+  transition: all .2s ease-in-out;
+}
+
+._reset-btn svg {
+  width: 19px;
+}
+
+._reset-btn svg path {
+  fill: #757b89;
+  transition: all .2s ease-in-out;
+}
+
+._reset-btn::before {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  background: linear-gradient(90deg, #4f9fe1 0%, #297de5 100%);
+  transition: all .2s ease-in-out;
+  opacity: 0;
+  border-radius: 2em;
+  z-index: -1;
+}
+
+._reset-btn:hover {
+  border: 2px solid transparent;
+  box-shadow: 0px 9px 32px 0px rgba(31, 90, 153, 0.3);
+}
+
+._reset-btn:hover::before {
+  opacity: 1;
+}
+
+._reset-btn:hover path {
+  fill: #FFFFFF;
+}
+
+.intro-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 -5px;
+}
+
+.intro-links > * {
+  flex: 0 1 calc(50% - 10px);
+}
+
+.intro-links-item {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.intro-links-item-link {
+  width: 100%;
 }
 
 ._icon-btn {
@@ -160,7 +311,7 @@ body {
   border-radius: 0.3em;
   background-color: #FFFFFF;
   border: 2px solid #c9cfdd;
-  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0);
   transition: all .2s ease-in-out;
 }
 
@@ -175,7 +326,7 @@ body {
 
 ._icon-btn._active {
   border: 2px solid transparent;
-  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
 }
 
 ._icon-btn._active svg path {
@@ -183,7 +334,7 @@ body {
 }
 
 ._icon-btn:hover {
-  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
   border: 2px solid transparent;
 }
@@ -207,7 +358,7 @@ body {
 }
 
 ._icon-link._alt-styles svg {
-  fill: #333;
+  fill: #333333;
 }
 
 ._header-link {
@@ -215,8 +366,12 @@ body {
   font-size: 14px;
   text-transform: uppercase;
   padding: 13px 0;
-  border-bottom: 0px solid;
+  border-bottom: 2px solid transparent;
   transition: all .2s ease-in-out;
+}
+
+._header-link:hover {
+  border-color: #757b89;
 }
 
 ._header-link._active {
@@ -226,16 +381,26 @@ body {
 ._classic-link-style {
   display: inline-block;
   background-color: transparent;
-  color: #3285e4;
+  color: #333333;
   border: 0;
-  border-bottom: 1px solid #3285e4;
+  border-bottom: 1px solid transparent;
   border-radius: 0;
+  transition: all .2s ease-in-out;
 }
+
+._classic-link-style:hover {
+  color: #3285e4;
+  border-bottom: 1px solid #3285e4;
+}
+
+/* =-=-=-=-=-=-=-=-=-=-= </Кнопки и ссылки> =-=-=-=-=-=-=-=-=-=-= */
+
+/* =-=-=-=-=-=-=-=-=-=-= <Форма> =-=-=-=-=-=-=-=-=-=-= */
 
 ._input-styles,
 ._textarea-styles {
   box-shadow: none;
-  padding: 17px 20px;
+  padding: 16px 20px;
   width: 100%;
   border: 1px solid #b2b8c6;
   border-radius: 2em;
@@ -244,22 +409,121 @@ body {
 
 ._input-styles:focus,
 ._textarea-styles:focus {
-  box-shadow: inset 0px -3px 10px 0px rgba(20,36,85,0.19);
+  box-shadow: inset 0px -3px 10px 0px rgba(20, 36, 85, 0.19);
+}
+
+._placeholder-styles {
+  color: #757b89;
+  font-family: "Open Sans";
+  font-weight: 400;
+  display: inline-block;
 }
 
 ._textarea-styles {
-  min-height: 154px;
+  min-height: 145px;
+  border-radius: 25px;
 }
 
-.wrapper {
-  overflow: hidden;
+._select-styles {
+  background-color: #FFFFFF;
+  box-shadow: 0.629px 0.777px 8px 0px rgba(0, 0, 0, 0.15);
+  border: 0;
+  min-width: 207px;
+  padding: 10px 20px;
+  font-family: "Open Sans";
+  border-radius: 5px;
 }
 
-.slick-dots>li {
+._select-styles:hover {
+  cursor: pointer;
+}
+
+._file-btn {
+  display: inline-block;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 0;
+  background: linear-gradient(0deg, #4f9fe1 0%, #3c8ee3 57%, #297de5 100%);
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+}
+
+._file-btn:hover {
+  box-shadow: 0px 9px 32px 0px rgba(31, 90, 153, 0.3);
+}
+
+._file-btn::before,
+._file-btn::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #FFFFFF;
+}
+
+._file-btn::before {
+  width: 3px;
+  height: 17px;
+}
+
+._file-btn::after {
+  width: 17px;
+  height: 3px;
+}
+
+._file-input {
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.row-form__input {
+  border: 1px solid #9fa4b0;
+  flex: 0 1 40%;
+  width: 100%;
+}
+
+.row-form__form {
+  flex-wrap: wrap;
+  margin: 0 -5px;
+}
+
+.row-form__form > label {
+  flex: 1 1 100%;
+  padding: 5px;
+}
+
+.row-form__footer {
+  width: 100%;
+}
+
+.row-form__footer > label {
+  display: block;
+  height: 100%;
+}
+
+.row-form__submit {
+  width: 100%;
+  height: 100%;
+}
+
+.row-form__body {
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+  background-color: #FFFFFF;
+}
+
+/* =-=-=-=-=-=-=-=-=-=-= </Форма> =-=-=-=-=-=-=-=-=-=-= */
+
+/* =-=-=-=-=-=-=-=-=-=-= <Слайдер> =-=-=-=-=-=-=-=-=-=-= */
+
+.slick-dots > li {
   padding: 7px;
 }
 
-.slick-dots>li>button {
+.slick-dots > li > button {
   position: relative;
   display: inline-block;
   width: 9px;
@@ -272,7 +536,7 @@ body {
   transition: all .2s ease-in-out;
 }
 
-.slick-dots>li>button::before {
+.slick-dots > li > button::before {
   content: '';
   position: absolute;
   left: 0;
@@ -281,13 +545,17 @@ body {
   height: 200%;
 }
 
-.slick-dots>li.slick-active>button {
+.slick-dots > li.slick-active > button {
   border-color: #4f9fe1;
   background-color: #4f9fe1;
 }
 
+/* =-=-=-=-=-=-=-=-=-=-= </Слайдер> =-=-=-=-=-=-=-=-=-=-= */
+
+/* =-=-=-=-=-=-=-=-=-=-= <Меню> =-=-=-=-=-=-=-=-=-=-= */
+
 .social-list {
-  border-top: 2px solid rgba(178,184,198,0.3);
+  border-top: 2px solid rgba(178, 184, 198, 0.3);
 }
 
 .social-list__link svg {
@@ -312,31 +580,6 @@ body {
   color: #4f9fe1;
 }
 
-._icon-before {
-  padding-left: 20px;
-}
-
-.intro-links {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: calc(100% + 10px);
-  margin: 0 -5px;
-}
-
-.intro-links>* {
-  flex: 0 1 calc(50% - 10px);
-}
-
-.intro-links-item {
-  display: inline-block;
-  margin: 0 5px;
-}
-
-.intro-links-item-link {
-  width: 100%;
-}
-
 .page-address__item {
   position: relative;
 }
@@ -359,13 +602,86 @@ body {
 }
 
 .page-address__item--link:hover {
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #333333;
 }
+
+.page-menu__item {
+  text-align: center;
+}
+
+.page-menu__item._new {
+  position: relative;
+  padding-right: 14px;
+}
+
+.page-menu__item._new::before {
+  content: '';
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 9px;
+  height: 9px;
+  background-color: #4f9fe1;
+  border-radius: 50%;
+}
+
+.page-menu__link {
+  display: inline-block;
+  text-transform: uppercase;
+  width: 100%;
+  font-family: "Open Sans";
+  font-weight: 600;
+  transition: all .2s ease-in-out;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+}
+
+.page-menu__link:hover {
+  color: #4f9fe1;
+}
+
+.page-menu__link._active {
+  color: #4f9fe1;
+}
+
+/* Используеться в личном кабинете */
+
+.return-link {
+  display: inline-block;
+  position: relative;
+  text-transform: uppercase;
+  font-family: "Open Sans";
+  border-bottom: 1px solid transparent;
+  transition: all .2s ease-in-out;
+}
+
+.return-link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 30px;
+  height: 20px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36px' height='9px'%3E%3Cpath fill-rule='evenodd' fill='%23000000' d='M36.000,5.000 L2.207,5.000 L4.975,7.768 L4.268,8.475 L0.793,5.000 L0.716,5.000 L0.710,5.006 L0.704,5.000 L-0.000,5.000 L-0.000,4.296 L-0.006,4.290 L-0.000,4.284 L-0.000,4.000 L0.257,4.000 L0.732,3.525 L0.745,3.538 L4.290,-0.006 L5.006,0.710 L1.716,4.000 L36.000,4.000 L36.000,5.000 Z'/%3E%3C/svg%3E") left center/contain no-repeat;
+}
+
+.return-link:hover {
+  border-bottom: 1px solid #333333;
+}
+
+/* =-=-=-=-=-=-=-=-=-=-= </Меню> =-=-=-=-=-=-=-=-=-=-= */
+
+/* =-=-=-=-=-=-=-=-=-=-= <Маленький блок под фильтром> =-=-=-=-=-=-=-=-=-=-= */
 
 .min-add-block {
   width: 100%;
   max-width: 300px;
   margin: 0;
+}
+
+.min-add-block__body {
   background: center / cover no-repeat;
 }
 
@@ -382,9 +698,13 @@ body {
   font-weight: 600;
 }
 
+/* =-=-=-=-=-=-=-=-=-=-= </Маленький блок под фильтром> =-=-=-=-=-=-=-=-=-=-= */
+
+/* =-=-=-=-=-=-=-=-=-=-= <Блог> =-=-=-=-=-=-=-=-=-=-= */
+
 .blog-item__body {
   margin: 20px 0 0 0;
-  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.15);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.15);
   border-radius: 0 0 0.3em 0.3em;
 }
 
@@ -424,7 +744,7 @@ body {
   box-orient: vertical;
 }
 
-.blog-item__text>* {
+.blog-item__text > * {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -moz-box;
@@ -458,6 +778,10 @@ body {
   content: attr(data-after);
 }
 
+/* =-=-=-=-=-=-=-=-=-=-= </Блог> =-=-=-=-=-=-=-=-=-=-= */
+
+/* =-=-=-=-=-=-=-=-=-=-= <Карточка бизнеса и список карточек> =-=-=-=-=-=-=-=-=-=-= */
+
 .card-item.row-mode .card-item__body {
   display: flex;
   border-radius: 0.5em;
@@ -474,7 +798,7 @@ body {
 }
 
 .card-item.row-mode .card-item__buttons--btn svg {
-  fill: #333;
+  fill: #333333;
 }
 
 .card-item.row-mode .card-item__header {
@@ -518,8 +842,19 @@ body {
 .card-item__body {
   position: relative;
   top: 0px;
-  box-shadow: 0px 3px 15px 0px rgba(0,0,0,0.15);
+  box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.15);
   border-radius: 0 0 0.5em 0.5em;
+  transition: all .2s ease-in-out;
+}
+
+.card-item__body:hover {
+  top: -10px;
+  box-shadow: 0px 3px 35px 0px rgba(0, 0, 0, 0.25);
+}
+
+.card-item__body:hover .card-item__header--details-buttons {
+  opacity: 1;
+  visibility: visible;
 }
 
 .card-item__buttons {
@@ -540,6 +875,10 @@ body {
 
 .card-item__buttons--btn svg * {
   transition: all .2s ease-in-out;
+}
+
+.card-item__buttons--btn._active svg path {
+  fill: #4f9fe1;
 }
 
 .card-item__buttons--btn:hover svg path {
@@ -590,7 +929,7 @@ body {
 }
 
 .card-item__header--label {
-  background-color: rgba(255,255,255,0.3);
+  background-color: rgba(255, 255, 255, 0.3);
   color: #FFFFFF;
   padding: 2px 9px;
   margin: 5px 0;
@@ -599,7 +938,7 @@ body {
 }
 
 .card-item__header--label._alt-style {
-  background-color: rgba(79,159,225,0.6);
+  background-color: rgba(79, 159, 225, 0.6);
 }
 
 .card-item__header--details-buttons {
@@ -693,7 +1032,7 @@ body {
   margin: 0 -10px;
 }
 
-.card-list__header>* {
+.card-list__header > * {
   margin: 0 10px;
 }
 
@@ -727,7 +1066,7 @@ body {
   position: absolute;
   right: 10px;
   top: 100%;
-  box-shadow: 0px 3px 15px 0px rgba(0,0,0,0.15);
+  box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.15);
   border-radius: 0.5em;
   z-index: 100;
   background-color: #FFFFFF;
@@ -774,13 +1113,17 @@ body {
   align-items: center;
 }
 
+/* =-=-=-=-=-=-=-=-=-=-= </Карточка бизнеса и список карточек> =-=-=-=-=-=-=-=-=-=-= */
+
+/* =-=-=-=-=-=-=-=-=-=-= <Блоки проверить бизнес и поставить оценку> =-=-=-=-=-=-=-=-=-=-= */
+
 .add-block {
   width: 100%;
   position: relative;
 }
 
 .add-block__body {
-  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
   background-color: #FFFFFF;
   position: relative;
 }
@@ -812,94 +1155,11 @@ body {
   object-position: top;
 }
 
-.page-menu__item+.page-menu__item {
-  border-top: 1px solid #9fa4b0;
-}
+/* =-=-=-=-=-=-=-=-=-=-= </Блоки проверить бизнес и поставить оценку> =-=-=-=-=-=-=-=-=-=-= */
 
-.page-menu__list {
-  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.15);
-}
+/* =-=-=-=-=-=-=-=-=-=-= </Глобальные стили> =-=-=-=-=-=-=-=-=-=-= */
 
-.page-menu__link {
-  display: inline-block;
-  text-transform: uppercase;
-  width: 100%;
-  font-family: "Open Sans";
-  font-weight: 600;
-  transition: all .2s ease-in-out;
-}
-
-.page-menu__link:hover {
-  color: #4f9fe1;
-}
-
-.page-menu__link._active {
-  color: #4f9fe1;
-}
-
-.text-content p {
-  padding: 10px 0;
-  line-height: 2;
-}
-
-.text-content__image {
-  display: inline-block;
-  object-fit: cover;
-  border-radius: 15px;
-}
-
-.text-content__image._large-image {
-  width: 100%;
-  height: 100%;
-  max-height: 325px;
-}
-
-.text-content__image._min-image {
-  width: 100%;
-  height: 100%;
-  max-height: 188px;
-  display: block;
-}
-
-.text-content__img {
-  min-height: 188px;
-  overflow: hidden;
-}
-
-.row-form__input {
-  border: 1px solid #9fa4b0;
-  flex: 0 1 40%;
-  width: 100%;
-}
-
-.row-form__form {
-  flex-wrap: wrap;
-  margin: 0 -5px;
-}
-
-.row-form__form>label {
-  flex: 1 1 100%;
-  padding: 5px;
-}
-
-.row-form__footer {
-  width: 100%;
-}
-
-.row-form__footer>label {
-  display: block;
-  height: 100%;
-}
-
-.row-form__submit {
-  width: 100%;
-  height: 100%;
-}
-
-.row-form__body {
-  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
-  background-color: #FFFFFF;
-}
+/* =-=-=-=-=-=-=-=-=-=-= <Header> =-=-=-=-=-=-=-=-=-=-= */
 
 .header__body {
   display: flex;
@@ -998,7 +1258,7 @@ body {
   visibility: hidden;
   z-index: 2;
   background-color: #FFFFFF;
-  box-shadow: 0px 11px 51px 0px rgba(0,0,0,0.3);
+  box-shadow: 0px 11px 51px 0px rgba(0, 0, 0, 0.3);
   transition: all .3s ease-in-out;
 }
 
@@ -1097,6 +1357,10 @@ body {
   transform: rotate(-45deg);
 }
 
+/* =-=-=-=-=-=-=-=-=-=-= </Header> =-=-=-=-=-=-=-=-=-=-= */
+
+/* =-=-=-=-=-=-=-=-=-=-= <Главная страница> =-=-=-=-=-=-=-=-=-=-= */
+
 .intro__item--info {
   position: relative;
   left: 0px;
@@ -1170,9 +1434,13 @@ body {
   padding: 0px 5px;
   border-radius: 0.1em;
   color: #FFFFFF;
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0, 0, 0, 0.3);
   z-index: 10;
 }
+
+/* =-=-=-=-=-=-=-=-=-=-= </Главная страница> =-=-=-=-=-=-=-=-=-=-= */
+
+/* =-=-=-=-=-=-=-=-=-=-= <Список бизнесов> =-=-=-=-=-=-=-=-=-=-= */
 
 .intro-catalog {
   position: relative;
@@ -1203,6 +1471,10 @@ body {
 .business-catalog__block--header {
   flex-wrap: wrap;
 }
+
+/* =-=-=-=-=-=-=-=-=-=-= </Список бизнесов> =-=-=-=-=-=-=-=-=-=-= */
+
+/* =-=-=-=-=-=-=-=-=-=-= <Страница бизнеса> =-=-=-=-=-=-=-=-=-=-= */
 
 .header-business__body {
   color: #FFFFFF;
@@ -1328,11 +1600,11 @@ body {
   padding-top: 10px;
 }
 
-.info-business__slider .slick-dots>li {
+.info-business__slider .slick-dots > li {
   padding: 0 10px;
 }
 
-.info-business__slider .slick-dots>li>button {
+.info-business__slider .slick-dots > li > button {
   width: 10px;
   height: 10px;
 }
@@ -1388,9 +1660,17 @@ body {
 
 .info-business__tabs--btn-link._active {
   color: #4f9fe1;
-  box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.2);
   border: 1px solid transparent;
 }
+
+/* =-=-=-=-=-=-=-=-=-=-= </Страница бизнеса> =-=-=-=-=-=-=-=-=-=-= */
+
+/* =-=-=-=-=-=-=-=-=-=-= <Про Компанию> =-=-=-=-=-=-=-=-=-=-= */
+
+/* =-=-=-=-=-=-=-=-=-=-= <Про Компанию> =-=-=-=-=-=-=-=-=-=-= */
+
+/* =-=-=-=-=-=-=-=-=-=-= <Статьи, блог> =-=-=-=-=-=-=-=-=-=-= */
 
 .last-articels {
   width: 100%;
@@ -1404,7 +1684,7 @@ body {
 .last-articels__large-articel--body {
   flex: 1 1 100%;
   flex-direction: column;
-  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.15);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.15);
 }
 
 .last-articels__large-articel--image {
@@ -1464,7 +1744,7 @@ body {
 .last-articels__week--item-body {
   height: 100%;
   width: 100%;
-  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.15);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.15);
 }
 
 .last-articels__week--item-image {
@@ -1508,6 +1788,10 @@ body {
 .last-articels__week--item-link {
   font-family: 'PTSans';
 }
+
+/* =-=-=-=-=-=-=-=-=-=-= </Статьи, блог> =-=-=-=-=-=-=-=-=-=-= */
+
+/* =-=-=-=-=-=-=-=-=-=-= <Контакты> =-=-=-=-=-=-=-=-=-=-= */
 
 .main-contacts {
   position: relative;
@@ -1580,7 +1864,7 @@ body {
   width: 100%;
   height: 60px;
   left: 0;
-  box-shadow: 0px 18px 28.71px 0.29px rgba(0,0,0,0.14);
+  box-shadow: 0px 18px 28.71px 0.29px rgba(0, 0, 0, 0.14);
   z-index: 1;
 }
 
@@ -1592,12 +1876,12 @@ body {
   transform: translate(-50%, 0) rotate(45deg);
   z-index: 2;
   background-color: #FFFFFF;
-  box-shadow: 0px 18px 28.71px 0.29px rgba(0,0,0,0.14);
+  box-shadow: 0px 18px 28.71px 0.29px rgba(0, 0, 0, 0.14);
 }
 
 .map-contacts__body {
   position: relative;
-  box-shadow: inset 0px 18px 28.71px 0.29px rgba(0,0,0,0.14);
+  box-shadow: inset 0px 18px 28.71px 0.29px rgba(0, 0, 0, 0.14);
 }
 
 .map-contacts__body::before {
@@ -1610,6 +1894,264 @@ body {
   background-color: #FFFFFF;
   z-index: 3;
 }
+
+/* =-=-=-=-=-=-=-=-=-=-= </Контакты> =-=-=-=-=-=-=-=-=-=-= */
+
+/* =-=-=-=-=-=-=-=-=-=-= <Личный кабинет> =-=-=-=-=-=-=-=-=-=-= */
+
+.main-account__form--label {
+  display: block;
+}
+
+.main-account__form--row {
+  width: 100%;
+}
+
+.main-account__form--footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-account__user-business-list--mode {
+  order: -1;
+}
+
+.main-account__requests-message--form-message,
+.main-account__requests-page--form-message {
+  min-height: 224px;
+}
+
+.main-account__requests-message--form-footer,
+.main-account__requests-page--form-footer {
+  justify-content: end;
+  position: relative;
+}
+
+.main-account__requests-message--form-btn-body._for-reset-btn,
+.main-account__requests-page--form-btn-body._for-reset-btn {
+  position: absolute;
+  right: 0;
+  top: calc(50% + 10px);
+  transform: translate(0, -50%);
+}
+
+.main-account__requests-message--form-btn-body._for-submit-btn,
+.main-account__requests-page--form-btn-body._for-submit-btn {
+  flex: 1 1 100%;
+}
+
+.submit-business__form--block-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.submit-business__form--block-row {
+  align-items: flex-start;
+  width: 100%;
+  margin: 0;
+}
+
+.submit-business__form--label {
+  display: flex;
+  justify-content: start;
+  flex: 1 1 auto;
+}
+
+.submit-business__form--label._min-label {
+  flex: 0 1 auto;
+}
+
+.submit-business__form--placeholder {
+  display: block;
+  flex: 1 1 100%;
+}
+
+.submit-business__form--footer {
+  flex: 1 1 100%;
+  position: relative;
+  display: flex;
+  justify-content: end;
+}
+
+.submit-business__form--btn-body._for-reset-btn {
+  position: absolute;
+  right: 0;
+  top: calc(50% + 15px);
+  transform: translate(0, -50%);
+}
+
+.submit-business__form--btn-body._for-submit-btn {
+  flex: 1 1 100%;
+}
+
+.submit-business__form--description {
+  min-height: 390px;
+  padding-right: 10px;
+  letter-spacing: 0.9px;
+}
+
+.submit-business__form--item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.submit-business__form--select {
+  width: 100%;
+}
+
+.submit-business__form--file-body {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.submit-business__form--file-list {
+  flex: 1 1 auto;
+}
+
+.submit-business__form--file-btn {
+  flex: 0 0 50px;
+}
+
+.submit-business__form--file-item {
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+}
+
+.submit-business__form--file-item-value {
+  user-select: none;
+  max-width: 180px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  transition: all .2s ease-in-out;
+}
+
+.submit-business__form--file-item:hover .submit-business__form--file-item-value {
+  color: #4f9fe1;
+}
+
+.submit-business__form--file-item-remove {
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+}
+
+.submit-business__form--file-item-remove::before {
+  content: 'x';
+  font-family: 'Open Sans';
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.requests-list__item--body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 65px;
+  box-shadow: 0.629px 0.777px 8px 0px rgba(0, 0, 0, 0.15);
+}
+
+.requests-list__item._new .requests-list__item--body {
+  position: relative;
+}
+
+.requests-list__item._new .requests-list__item--body::before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 9px;
+  height: 9px;
+  background-color: #4f9fe1;
+  border-radius: 50%;
+}
+
+.requests-list__item--link {
+  max-width: 60%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.requests-list__item--info {
+  color: #757b89;
+}
+
+.requests-list__item--btn-remove {
+  color: #757b89;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  border-left: 2px solid #757b89;
+}
+
+.requests-list__item--btn-body {
+  flex: 0 1 15%;
+  height: 100%;
+}
+
+.request-chat__body {
+  box-shadow: 0.629px 0.777px 8px 0px rgba(0, 0, 0, 0.15);
+}
+
+.request-chat__list {
+  display: flex;
+  flex-direction: column;
+  max-height: 687px;
+  overflow: auto;
+}
+
+.request-chat__item {
+  align-self: flex-start;
+  max-width: 90%;
+}
+
+.request-chat__item--body {
+  border-radius: 5px;
+  position: relative;
+}
+
+.request-chat__item--body::before {
+  content: '';
+  position: absolute;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+}
+
+.request-chat__item._from-support .request-chat__item--body {
+  background-color: #e0e1e6;
+}
+
+.request-chat__item._from-support .request-chat__item--body::before {
+  left: 0;
+  bottom: 0;
+  transform: translate(-50%, 0);
+  border-bottom: 20px solid #e0e1e6;
+}
+
+.request-chat__item._from-user .request-chat__item--body {
+  background-color: #e4e8f5;
+}
+
+.request-chat__item._from-user .request-chat__item--body::before {
+  right: 0;
+  bottom: 0;
+  transform: translate(50%, 0);
+  border-bottom: 20px solid #e4e8f5;
+}
+
+.request-chat__item._from-user {
+  align-self: flex-end;
+}
+
+/* =-=-=-=-=-=-=-=-=-=-= </Личный кабинет> =-=-=-=-=-=-=-=-=-=-= */
+
+/* =-=-=-=-=-=-=-=-=-=-= <Footer> =-=-=-=-=-=-=-=-=-=-= */
 
 .footer {
   background-color: #eaedf3;
@@ -1643,7 +2185,7 @@ body {
 }
 
 .footer__nav--link:hover {
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #333333;
 }
 
 .footer__form--input {
@@ -1676,6 +2218,10 @@ body {
 .footer__social--link svg {
   width: 44px;
   fill: #acb5c3;
+}
+
+.footer__social--link:hover {
+  opacity: .5;
 }
 
 .footer__copy {
@@ -1722,6 +2268,10 @@ body {
   border-bottom: 1px solid #b2b8c6;
 }
 
+/* =-=-=-=-=-=-=-=-=-=-= </Footer> =-=-=-=-=-=-=-=-=-=-= */
+
+/* =-=-=-=-=-=-=-=-=-=-= <Медиа-запросы> =-=-=-=-=-=-=-=-=-=-= */
+
 @media (min-width: 480px) {
   .card-item.row-mode .card-item__buttons {
     right: 10px;
@@ -1754,14 +2304,14 @@ body {
   .last-articels__large-articel--link {
     width: auto;
   }
+
+  .requests-list__item._new .requests-list__item--body::before {
+    left: 25px;
+  }
 }
 
 @media (min-width: 500px) {
-  .intro-links {
-    margin: 0 -5px;
-  }
-
-  .intro-links>* {
+  .intro-links > * {
     flex: 0 0 auto;
   }
 
@@ -1782,6 +2332,19 @@ body {
 @media (min-width: 768px) {
   .intro-links {
     display: block;
+    width: auto;
+  }
+
+  .row-form__form > label {
+    flex: 0 1 calc(40% - 20px);
+    padding: 0 5px;
+  }
+
+  .row-form__footer {
+    width: auto;
+  }
+
+  .row-form__submit {
     width: auto;
   }
 
@@ -1810,19 +2373,6 @@ body {
     transform: translate(0%, 0%);
   }
 
-  .row-form__form>label {
-    flex: 0 1 calc(40% - 20px);
-    padding: 0 5px;
-  }
-
-  .row-form__footer {
-    width: auto;
-  }
-
-  .row-form__submit {
-    width: auto;
-  }
-
   .header-business__label-block {
     justify-content: end;
   }
@@ -1839,7 +2389,7 @@ body {
   }
 
   .info-business__tabs--btn-link {
-    color: #333;
+    color: #333333;
     border: 2px solid transparent;
     border-bottom: 2px solid transparent;
     border-radius: 0;
@@ -1848,7 +2398,7 @@ body {
 
   .info-business__tabs--btn-link._active {
     border-bottom: 2px solid #757b89;
-    color: #333;
+    color: #333333;
     box-shadow: none;
   }
 
@@ -1863,6 +2413,42 @@ body {
 
   .form-contacts__submit {
     width: auto;
+  }
+
+  .main-account__form--footer {
+    justify-content: end;
+  }
+
+  .main-account__requests-message--form-btn-body._for-reset-btn,
+  .main-account__requests-page--form-btn-body._for-reset-btn {
+    position: static;
+    transform: translate(0, 0);
+  }
+
+  .main-account__requests-message--form-btn-body._for-submit-btn,
+  .main-account__requests-page--form-btn-body._for-submit-btn {
+    flex: 0 1 auto;
+  }
+
+  .submit-business__form--btn-body._for-reset-btn {
+    position: static;
+    transform: translate(0, 0);
+  }
+
+  .submit-business__form--btn-body._for-submit-btn {
+    flex: 0 1 auto;
+  }
+
+  .submit-business__form--description {
+    min-height: 210px;
+  }
+
+  .submit-business__form--file-item {
+    justify-content: space-between;
+  }
+
+  .request-chat__item {
+    max-width: 57%;
   }
 
   .footer__social {
@@ -1904,6 +2490,28 @@ body {
 }
 
 @media (min-width: 992px) {
+  .page-menu__item {
+    text-align: left;
+  }
+
+  .page-menu__item._new::before {
+    right: 10px;
+  }
+
+  .page-menu__item + .page-menu__item {
+    border-top: 1px solid #9fa4b0;
+  }
+
+  .page-menu__body {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+  }
+
+  .page-menu__link {
+    box-shadow: none;
+    border-radius: 0px;
+  }
+
   .card-item__header--detail-btn svg {
     width: 40px !important;
   }
@@ -1980,7 +2588,7 @@ body {
   }
 
   .owner-business__body {
-    box-shadow: 0px 3px 15px 0px rgba(0,0,0,0.15);
+    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.15);
   }
 
   .owner-business__info--header {
@@ -2002,6 +2610,14 @@ body {
     margin: 0;
   }
 
+  .main-account__user-business-list--mode {
+    order: 2;
+  }
+
+  .submit-business__form--description {
+    padding-right: 30px;
+  }
+
   .footer__row._top-line::before {
     left: 50%;
     top: 0;
@@ -2017,76 +2633,6 @@ body {
 }
 
 @media (any-hover: hover) {
-  ._btn {
-    color: #333;
-    border: 2px solid #000000;
-    box-shadow: none;
-  }
-
-  ._btn::before {
-    opacity: 0;
-  }
-
-  ._btn:hover {
-    border: 2px solid transparent;
-    box-shadow: 0px 9px 32px 0px rgba(31,90,153,0.3);
-    color: #FFFFFF;
-  }
-
-  ._btn:hover::before {
-    opacity: 1;
-  }
-
-  ._btn._min-btn:hover {
-    box-shadow: none;
-  }
-
-  ._btn._light-style {
-    color: #FFFFFF;
-    border: 2px solid #FFFFFF;
-  }
-
-  ._btn._light-style:hover {
-    border: 2px solid transparent;
-  }
-
-  ._header-link {
-    border-bottom: 2px solid transparent;
-  }
-
-  ._header-link:hover {
-    border-color: #757b89;
-  }
-
-  ._classic-link-style {
-    transition: all .2s ease-in-out;
-    color: #333;
-    border-bottom: 1px solid transparent;
-  }
-
-  ._classic-link-style:hover {
-    color: #3285e4;
-    border-bottom: 1px solid #3285e4;
-  }
-
-  .blog-item__link {
-    color: #4f9fe1;
-  }
-
-  .card-item__body {
-    transition: all .2s ease-in-out;
-  }
-
-  .card-item__body:hover {
-    top: -10px;
-    box-shadow: 0px 3px 35px 0px rgba(0,0,0,0.25);
-  }
-
-  .card-item__body:hover .card-item__header--details-buttons {
-    opacity: 1;
-    visibility: visible;
-  }
-
   .card-item__header--details-buttons {
     opacity: 0;
     visibility: hidden;
@@ -2132,14 +2678,10 @@ body {
 
   .info-business__slider--item:hover {
     transform: translate(0, -10px);
-    box-shadow: 0px 3px 15px 0px rgba(0,0,0,0.15);
+    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.15);
   }
 
   .info-business__slider--item:hover .info-business__slider--item-icon svg {
     opacity: 1;
-  }
-
-  .footer__social--link:hover {
-    opacity: .5;
   }
 }

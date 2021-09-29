@@ -475,24 +475,6 @@ body {
   color: #4f9fe1;
 }
 
-._icon-link svg {
-  width: 24px;
-  height: 24px;
-  fill: #FFFFFF;
-}
-
-._icon-link svg * {
-  transition: all .2s ease-in-out;
-}
-
-._icon-link:hover svg * {
-  fill: #4f9fe1;
-}
-
-._icon-link._alt-styles svg {
-  fill: #333333;
-}
-
 ._header-link {
   display: inline-block;
   font-size: 14px;
@@ -1037,6 +1019,19 @@ body {
   overflow: hidden;
 }
 
+.card-item__header--btn {
+  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: all .2s ease-in-out;
+  /* padding: 10px;
+            border-radius: 25px; */
+}
+
+.card-item__header--btn:hover {
+  color: #757b89;
+  background-color: white;
+}
+
 .card-item__header--image {
   position: absolute;
   left: 0;
@@ -1093,6 +1088,7 @@ body {
   visibility: visible;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   transition: all .2s ease-in-out;
 }
@@ -1600,13 +1596,11 @@ body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   transition: all .2s ease-in-out;
   z-index: 2;
   background-color: rgba(255, 255, 255, 0.3);
-  opacity: 0;
-  visibility: hidden;
 }
 
 .min-video-blog__item--play-btn::before {
@@ -1614,7 +1608,8 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-40%, -50%);
+  font-size: 28px;
   transition: all .2s ease-in-out;
 }
 
@@ -2238,7 +2233,7 @@ body {
 }
 
 .submit-business__form--description {
-  min-height: 390px;
+  min-height: 210px;
   padding-right: 10px;
   letter-spacing: 0.9px;
 }
@@ -2629,6 +2624,15 @@ body {
     transform: translate(0%, 0%);
   }
 
+  .min-video-blog__item--play-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .min-video-blog__item--play-btn::before {
+    font-size: 21px;
+  }
+
   .header-business__label-block {
     justify-content: end;
   }
@@ -2689,10 +2693,6 @@ body {
 
   .submit-business__form--btn-body._for-submit-btn {
     flex: 0 1 auto;
-  }
-
-  .submit-business__form--description {
-    min-height: 210px;
   }
 
   .submit-business__form--file-item {
@@ -2873,6 +2873,11 @@ body {
 
 @media (any-hover: hover) {
   .card-item__header--details-buttons {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .min-video-blog__item--play-btn {
     opacity: 0;
     visibility: hidden;
   }
